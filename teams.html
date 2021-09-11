@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/teams.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+    <title>Team Managment</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+
+</head>
+
+<body onload="createteam();">
+
+    <div class="container">
+        <fieldset class="main-border">
+            <legend class="main-border" style="background-color: black;">Teams</legend>
+            <section class="text-center">
+                <h4 class="team1" >Teams you own</h4>
+            </section>
+            <div class="second-container container" id="createElement">
+            </div>
+
+            <section class="text-center">
+                <h4 class="team2">Teams you're part of</h4>
+            </section>
+            <div class="second-container container" id="partteamElement">
+            </div>
+
+            <div class="d-flex justify-content-end">
+                <button type="button" onclick="showinputmodalbox()"
+                    class="btn btn-primary btn-add-icon text-white shadow-remove borderradius-remove" data-bs-toggle="modal"
+                    data-bs-target="#staticBackdrop">
+
+                    <i class="bi bi-plus-lg"></i>
+                </button>
+                &nbsp;&nbsp;&nbsp;
+                <button type="button" onclick="deleteall()"
+                    class="btn btn-danger btn-del-icon text-white shadow-remove borderradius-remove" title="DoubleTap to delete">
+                    <i class="bi bi-trash"></i>
+                </button>
+
+            </div>
+        </fieldset>
+    </div>
+
+  
+    <!-- POPUP-->
+
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content borderradius-remove">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">Create new  Team</h5>
+                </div>
+                <div class="modal-body">
+                    <form id="addingmemberform" class="container">
+                        <div class="form-outline">
+                            <label for="teamnameinput" class="form-label">Team Name</label>
+                            <input type="email" class="form-control shadow-remove borderradius-remove"
+                                placeholder="Team Name" id="teamnameinput" aria-describedby="emailHelp">
+                        </div>
+                        <input type="hidden" id="hiddeninput">
+                        <br>
+                        <div class="form-outline">
+                            <label for="teamcatogeryinput" class="form-label">Category</label>
+                            <select id="teamcatogeryinput" class="form-select shadow-remove borderradius-remove"
+                                aria-label="Default select example">
+                                <option value="Not selected" selected>Category</option>
+                                <option value="Maintainence">Maintainence</option>
+                                <option value="Development">Development</option>
+                                <option value="Project Manager">Project Manager</option>
+                            </select>
+                        </div>
+                        <br>
+                        <div class="form-outline">
+                            <label for="memberemailinput" class="form-label">Member (Type member email)</label>
+                            <input type="email" class="form-control shadow-remove borderradius-remove"
+                                id="memberemailinput" aria-describedby="emailHelp">
+                            <p class="text-muted">
+                                Seperated by Comas (<b style="font-size: 22px; color: #000;">,</b>)
+                            </p>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer d-flex justify-content-center">
+                    <button type="button" id="createteamid" onclick="createteamdatastore(); createteam(); "
+                        class="btn btn-primary text-white borderradius-remove shadow-remove" data-bs-dismiss="modal">
+                        Create
+                    </button>
+
+                    <button type="button" id="editteambutton" onclick="saveeditteam()" style="display: none;"
+                        class="btn btn-info text-white borderradius-remove shadow-remove" data-bs-dismiss="modal">
+                        Edit
+                    </button>
+
+                    <button type="button" id="cancelbutton"
+                        class="btn btn-danger text-white borderradius-remove shadow-remove" data-bs-dismiss="modal">
+                        Cancel
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="./js/app.js"></script>
+    <script src="./js/loginandsignup.js"></script>
+    <script src="./js/teamowner.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

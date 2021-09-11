@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+
+
+body{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif !important;
+ 
+}
+
+.team1,
+.team2{
+  text-align: center;
+  left: 10px;
+  width: 100%;
+  font-weight: bold;
+  color: #413f3f;
+  font-size: 30px;
+}
+
+
+fieldset.main-border {
+  border: 2px groove rgb(71, 64, 64) !important;
+  padding: 0 1.4em 1.4em 1.4em !important;
+  margin: 0 0 1.5em 0 !important;
+  /* -webkit-box-shadow: 0px 0px 0px 0px #000; */
+  box-shadow: 0.6px 0.6px 10px 0.2px rgb(128, 116, 116);
+  margin-top: 30px !important;
+  background: -webkit-linear-gradient(left, #f0e9e9, #fcf8f8);
+}
+
+legend.main-border {
+  font-size: 22px !important;
+  font-weight: bold !important;
+  width:auto;
+  padding: 0px 10px 0px 10px;
+  border-bottom: none;
+  margin-top: -15px;
+  background: -webkit-linear-gradient(left, #202020, #c9c2c2);
+  color: white;
+  text-transform: uppercase;
+}
+
+fieldset.myteam {
+  border: 1px groove #ddd !important;
+  margin: 30px 30px 30px 30px;
+  
+}
+
+.myteam .myteamcontent{
+  padding: 10px 40px;
+  font-size: 20px !important;
+  word-wrap: break-word;
+
+}
+
+.myteamcontent .teamname{
+  padding-top: 10px;
+  padding-bottom: 0px;
+}
+
+.myteamcontent .teammember{
+  margin-top: -7px;
+  font-size: 14px;
+  word-wrap: break-word;
+}
+
+.for-break{
+  word-wrap: break-word;
+
+}
+
+.myteamcontent .teamcategory{
+  margin-top: 140 !important;
+  font-size: 17px;
+}
+
+.shadow-remove:focus {
+  border: 0px !important;
+  box-shadow: none !important;
+}
+
+.borderradius-remove{
+  border-radius: 0px !important;
+}
+
+.form-outline input:focus,
+.form-outline input {
+  border-bottom: 1px solid black !important;
+  border-top: 0px;
+  border-left: 0px;
+  border-right: 0px;
+  border-radius: 0px;
+  transition: 0.4s ease-in-out;
+  box-shadow: none;
+}
+.form-outline input {
+  border-radius: 0px !important;
+}
+
+.member{
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.btn-add-icon,
+.btn-del-icon{
+  border-radius: 50px !important;
+  height: 50px;
+  width: 50px;
+}
+
+.modal-title{
+  text-align: center;
+  left: 10px;
+  width: 100%;
+  font-weight: bold;
+  color: #413f3f;
+  font-size: 30px;
+}
